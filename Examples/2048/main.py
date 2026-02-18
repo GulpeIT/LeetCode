@@ -1,18 +1,16 @@
 import unittest
 
-test1: int = 1 # answer 22
-test2: int = 1000 # answer 1333
-test3: int = 3000 # answer 3133
-
 class Solution:
     def nextBeautifulNumber(n: int) -> int:
         result: str = ""
-        # print(f"result start = {result}")
         
         for num in str(n):
             x = str(n).count(num)
             result += str(x)
-        return int(result)
+            if result > n:
+                return int(result)  
+            else:
+                ...
 
 
 class UnitTest(unittest.TestCase):
